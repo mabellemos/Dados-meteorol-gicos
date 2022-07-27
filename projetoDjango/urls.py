@@ -1,6 +1,6 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
-    #path('dadosclima/', dados_clima.urls),
+    path('',include('dados_clima.urls')),
 ]
