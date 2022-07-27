@@ -1,0 +1,35 @@
+.submit-lente {
+  position:absolute;
+  top:0; right:0;
+  z-index:10;
+  border:none;
+  background:transparent;
+  outline:none;
+}
+
+.submit-line {
+  position: relative;
+  width: 400px;
+}
+
+.submit-line input {
+  width: 100%;
+}
+
+section {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.blue-text {
+		color: white;
+	}
+	
+	.black-background {
+		background: blue;
+     height: 200px;
+  }
+
+ 
