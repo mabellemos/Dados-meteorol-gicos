@@ -7,11 +7,65 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Previsão do tempo</title>
-  <link rel="stylesheet" type="text/css" href="templates/static/css/styles.css"/>
+  <style>
+    html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      background-color: #95ace6;
+    }
+    
+    input{
+      background-color: #bac7eb;
+      width: 700px;
+      height: 40px;
+      margin-right: 34%;
+      margin-left: 25%;
+      border-radius: 40px;
+      border: none;
+      padding: 20px;
+    }
+    
+    .menu{
+       height: 100px;
+       width: 100px;
+    }
+
+    div{
+      padding: 30px;
+    }
+    
+    p{
+      font-size: 32px;
+    }
+    
+    button{
+       background-color: #bac7eb;
+       height: 40px;
+       width: 100px;
+       border: none;
+       border-radius: 40px;
+       margin: 20px;
+      margin-left: 70%;
+    }
+    
+    .resposta {
+      height: 400px;
+      width: 700px;
+      margin-left: 25%;
+      margin-bottom: 20px;
+      border-radius: 30px;
+      background-color: #3b097b;
+      color: #ffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
 </head>
 
 <body>
 
+ <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  
  <div>
   <a href="https://ibb.co/mypRdZQ">
     <img src="https://i.ibb.co/QH0JhSs/LIMOEIRO-DE-ANADIA-P-LEVE-NOVO.png" alt="LIMOEIRO-DE-ANADIA-P-LEVE-NOVO" border="0"></a>
@@ -25,11 +79,7 @@
   </button>
 </form>
 
-<div>
-  <a href="https://imgbb.com/"><img src="https://i.ibb.co/HxqJYp9/icone.png" alt="icone" border="0"></a>
-</div>
-
-<div class="blue-text black-background height">
+<div class="resposta">
 <br>
   <p style="text-align:center">Dados meteorológicos</p>
   {{ clima }}
