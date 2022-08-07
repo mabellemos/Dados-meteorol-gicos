@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Previsão do tempo</title>
+    <link href="static/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="superior">
+
+            <div class="img">
+                <a href="https://imgbb.com/">
+                    <img class="logo" src="https://i.ibb.co/cNDpzV6/LIMOEIRO-DE-ANADIA-P-LEVE-NOVO-1-removebg-preview.png" alt="LIMOEIRO-DE-ANADIA-P-LEVE-NOVO-1-removebg-preview" border="0">
+                </a>
+            </div>
+
+            <form action="{% url 'index' %}" method="POST">
+                {% csrf_token %}
+                <input type="text" name="cidade" id="cidade" placeholder="LIMOEIRO DE ANADIA" required>
+                <button class="submit-lente" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+
+        </div>
+
+        <div class="resposta">
+            <br>
+            <p style="text-align:center">Dados meteorológicos</p>
+            {{ clima }}
+        </div>
+
+    </div>
+
+</body>
+
+</html>
