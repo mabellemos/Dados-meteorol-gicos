@@ -17,6 +17,12 @@ input {
     padding: 20px;
 }
 
+#botao{
+    margin: auto;
+    color: #3b097b;
+    font-size: 15px;
+}
+
 .texto{
     color: #bac7eb;
     font-size: 40px;
@@ -28,6 +34,7 @@ input {
     height: 150px;
     width: 150px;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 .logo {
