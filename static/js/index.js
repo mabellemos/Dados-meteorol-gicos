@@ -1,14 +1,23 @@
-var texto = document.getElementById("texto").value;
-var sol = document.getElementById("sol");
-var nublado = document.getElementById("nublado");
-var chuva = document.getElementById("chuva");
+var texto = document.getElementById('texto').text;
+var sol = document.querySelector('#sol');
+var nublado = document.querySelector('#nublado');
+var chuva = document.querySelector('#chuva');
+var tempo = document.querySelector('#tempo');
 
-if(texto === "céu limpo" || texto === "céu claro" || texto === "intensidade da luz"){
-    sol.style.display = "block";
-}
-if(texto === "nuvens nubladas" || texto === "poucas nuvens" || texto === "nuvens quebradas" || texto === "nuvens dispersas" ){
-    nublado.style.display = "block";
-}
-if(texto === "chuva"){
-    chuva.style.display = "block";
+var botao = document.getElementById("botao");
+botao.addEventListener('click', mudarEstado);
+
+function mudarEstado(){
+    if((texto == "Céu limpo") || (texto == "Céu claro") || (texto == "Intensidade da luz") || (texto == "Poucas nuvens")){
+        sol = style.display = 'block';
+    }
+    else if((texto == "Nuvens nubladas") || (texto == "Poucas nuvens") || (texto == "Nuvens quebradas") || (texto == "Nuvens dispersas")){
+       nublado = style.display = 'block';
+    }
+    else if(texto == "Chuva"){
+        chuva = style.display = 'block';
+    }
+    else{
+        tempo = style.display = 'block';
+    }
 }

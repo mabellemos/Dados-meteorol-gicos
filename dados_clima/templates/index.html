@@ -25,7 +25,7 @@
             <form action="{% url 'index' %}" method="POST">
                 {% csrf_token %}
                 <input type="text" name="cidade" id="cidade" placeholder="LIMOEIRO DE ANADIA" required>
-                <button class="submit-lente" type="submit">
+                <button id="botao" onclick="mudarEstado()" class="submit-lente" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
             </form>
@@ -36,9 +36,10 @@
             <br>
             <p style="text-align:center">Descrição do clima</p>
             <p id="texto" style="text-align:center" class="texto">{{ traducao }}</p>
-            <a id="sol" href="https://imgbb.com/"><img src="https://i.ibb.co/FhpGxRN/Design-sem-nome-removebg-preview.png" alt="" class="fig"></a>
-            <a id="nublado" href="https://imgbb.com/"><img src="https://i.ibb.co/y4K93VF/Design-sem-nome-1-removebg-preview.png" alt="" class="fig"></a>
-            <a id="chuva" href="https://imgbb.com/"><img src="https://i.ibb.co/HFCJXqD/Design-sem-nome-2-removebg-preview.png" alt="" class="fig"></a>
+            <a href="https://imgbb.com/"><img class="fig" id="sol" name="sol" src="https://i.ibb.co/FhpGxRN/Design-sem-nome-removebg-preview.png" alt=""></a>
+            <a href="https://imgbb.com/"><img class="fig" id="nublado" name="nublado" src="https://i.ibb.co/y4K93VF/Design-sem-nome-1-removebg-preview.png" alt=""></a>
+            <a href="https://imgbb.com/"><img class="fig" id="chuva" name="chuva" src="https://i.ibb.co/HFCJXqD/Design-sem-nome-2-removebg-preview.png" alt=""></a>
+            <a href="https://imgbb.com/"><img class="fig" id="tempo" name="tempo" src="https://i.ibb.co/vHJ9yYS/Design-sem-nome-removebg-preview.png" alt=""></a>
         </div>
 
     </div>
