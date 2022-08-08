@@ -2,6 +2,8 @@
 from django.shortcuts import render
 import requests 
 from pprint import pprint
+from translate import Translator
+import translate 
 
 def index(request):
     context = {}
@@ -10,7 +12,11 @@ def index(request):
 
         cidade = request.POST.get('cidade', None)
         base_url = "http://api.openweathermap.org/data/2.5/weather?appid="+API_chave+"&q="+cidade
-
-        clima = requests.get(base_url).json
-        context['clima'] = clima
+        
+        dados = requests.get(base_url).json()
+        descricao = dados.get("weather")
+        clima = descricao[0].get("description")
+        idioma = Translator(from_lang="english", to_lang="pt-br")
+        traducao = idioma.translate(clima)
+        context['traducao'] = traducao
     return render(request, "index.html", context=context)

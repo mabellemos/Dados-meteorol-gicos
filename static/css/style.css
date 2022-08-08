@@ -17,6 +17,18 @@ input {
     padding: 20px;
 }
 
+.texto{
+    color: #bac7eb;
+    font-size: 40px;
+}
+
+.fig {
+    display: none;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+
 .logo {
     height: 200px;
     width: 200px;
